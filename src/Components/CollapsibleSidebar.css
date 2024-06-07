@@ -1,0 +1,52 @@
+/* CSS to style the sidebar */
+.sidebar {
+    position: fixed;
+    top: 10%;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    padding-top: 50px;
+    transition: all 0.4s;
+  }
+  
+  .sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+  }
+  
+  .sidebar a:hover {
+    background-color: #555;
+  }
+  
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      margin-left: 0;
+      width: 100%;
+    }
+    .sidebar {
+        width: 0;
+        overflow: hidden;
+      }
+  }
+  
+  /* Styling the button to toggle the sidebar */
+  #sidebarCollapse {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+  }
+  
+  /* .bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+} */
