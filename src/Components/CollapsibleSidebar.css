@@ -1,52 +1,55 @@
-/* CSS to style the sidebar */
+.container {
+  display: flex;
+}
+
 .sidebar {
-    position: fixed;
-    top: 10%;
-    left: 0;
-    height: 100%;
-    width: 250px;
-    background-color: #333;
-    padding-top: 50px;
-    transition: all 0.4s;
-  }
-  
-  .sidebar a {
-    padding: 10px;
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-    display: block;
-  }
-  
-  .sidebar a:hover {
-    background-color: #555;
-  }
-  
-  .content {
-    margin-left: 250px;
-    padding: 20px;
+  width: 15%;
+  height: 100vh;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  top: 10%;
+  left: 0;
+  overflow-y: auto;
+  transition: all 0.4s;
+}
+
+.sidebar a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+}
+
+.sidebar a:hover {
+  background-color: #555;
+}
+
+.content {
+  margin-left: 7%;
+  width: 93%;
+  padding: 25px;
+}
+
+.dropdown-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
   }
 
-  @media (max-width: 768px) {
-    .content {
-      margin-left: 0;
-      width: 100%;
-    }
-    .sidebar {
-        width: 0;
-        overflow: hidden;
-      }
+  .content {
+    margin-left: 0;
+    width: 100%;
   }
-  
-  /* Styling the button to toggle the sidebar */
-  #sidebarCollapse {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 1;
-  }
-  
-  /* .bg-body-tertiary {
-    --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
-} */
+}
