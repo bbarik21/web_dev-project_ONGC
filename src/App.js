@@ -1,13 +1,21 @@
-import './App.css';
-import Navbar from './Components/Navbar';
-import Dashboard from './Components/Dashboard'
+import './App.css'
+import Login from './login'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Signup from './signup'
+
 function App() {
+  
   return (
-    <>
-      <Navbar title="ONGC"/>
-      <Dashboard/>
-    </>
-  );
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Login />}></Route>
+          <Route path='/signup' element={<Signup />}></Route>
+        </Routes>
+        {/* <Routes>
+          <Route path='/' element={<Signup/>}></Route>
+        </Routes> */}
+      </BrowserRouter>
+  )
 }
 
 export default App;
