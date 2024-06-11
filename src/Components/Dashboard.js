@@ -125,6 +125,12 @@ function CollapsibleSidebar() {
         </div>
         {content}
       </div>
+      <div className="content">
+        <div className="dropdown-container">
+          {formWithDropdown}
+        </div>
+        {content}
+      </div>
     </div>
   );
 }
