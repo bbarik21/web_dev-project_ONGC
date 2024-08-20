@@ -1,14 +1,23 @@
-.container {
-  display: flex;
+
+.navbar {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
+/* Sidebar styles */
 .sidebar {
   width: 15%;
-  height: 100vh;
+  height: calc(100vh - 65px); /* Adjust height based on the navbar height */
   background-color: #333;
   color: white;
   position: fixed;
-  top: 10%;
+  top: 65px; /* Adjust top based on the navbar height */
   left: 0;
   overflow-y: auto;
   transition: all 0.4s;
@@ -26,30 +35,52 @@
   background-color: #555;
 }
 
+/* Main content area styles */
 .content {
-  margin-left: 7%;
-  width: 93%;
-  padding: 25px;
+  margin-left: 15%; /* Adjust based on the sidebar width */
+  padding: 80px 25px 25px 25px; /* Top padding to accommodate the fixed navbar */
 }
 
-.dropdown-container {
-  width: 100%;
-  padding: 20px;
+/* Card styles */
+.card {
+  transition: transform 0.3s;
 }
 
-.form-control {
-  width: 100%;
-  padding: 10px;
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.card-asset-master {
+  background-color: #f8d7da;
+}
+
+.card-software {
+  background-color: #d1ecf1;
+}
+
+.card-readings {
+  background-color: #fff3cd;
+}
+
+.card-attendance {
+  background-color: #d4edda;
 }
 
 @media (max-width: 768px) {
   .sidebar {
     width: 100%;
     position: relative;
+    top: 0;
+    height: auto;
   }
 
   .content {
     margin-left: 0;
-    width: 100%;
+    padding-top: 15px; 
   }
 }

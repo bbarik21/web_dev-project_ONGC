@@ -1,0 +1,50 @@
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 0 0 48%;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    flex: 0 0 40%;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.form-control {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.select-short {
+    width: 60px;
+    margin-left: 10px;
+}
+
+.text-center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    margin-top: 20px;
+    display: inline-block;
+}

@@ -1,0 +1,22 @@
+.form-section {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  margin-right: 20px; /* Adjust margin for spacing between sections */
+}
+
+.list-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  flex-grow: 1; /* Allow list-section to grow to fill available space */
+}
+
+@media (max-width: 768px) {
+  .form-section, .list-section {
+    margin-right: 0; }
+}

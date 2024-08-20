@@ -1,38 +1,50 @@
-import React from 'react'
-import logo from '../logo.svg'
-import PropTypes from 'prop-types'
+// Navbar.js
+import React from 'react';
+import PropTypes from 'prop-types';
+import logo from '../ongc_logo2.png';
+import './Navbar.css'; 
 
+const titleStyle = {
+  fontSize: '1.5rem', 
+  verticalAlign: 'middle', 
+  marginLeft: '10px', 
+  fontWeight: 'bold',
+  color: 'maroon',
+};
 
-export default function Navbar(props)
-{
-    return(
-        <nav className="navbar navbar-expand-md bg-body-tertiary">
-          <div className="container-fluid">
-            <a className="navbar-brand" href="/">
-              <img src={logo} alt="Logo" width="40" height="30" className="d-inline-block align-text-top"/>
-              {props.title}
-            </a>
+const subtitleStyle = {
+  fontSize: '0.8rem',
+  color: 'black',
+  fontStyle: 'italic',
+  display: 'block',
+};
+const imageStyle = {
+  verticalAlign: 'middle',
+  marginTop: '3px', 
+};
 
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-
-            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div className="navbar-nav me-auto mb-lg-0">
-                <a className="nav-link active" aria-current="page" href="/">Home</a>
-                <a className="nav-link" href="/">Features</a>
-                <a className="nav-link" href="/">Pricing</a>
-                <a className="nav-link disabled me-3" aria-disabled="true">Disabled</a>
-            </div>
-            
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form> 
-          </div>
+export default function Navbar(props) {
+  return (
+    <nav className="navbar navbar-expand-md bg-body-tertiary" style={{ padding: '10px 20px', display: 'flex', justifyContent: 'center' }}>
+      <div className="container-fluid">
+        <div className="d-flex align-items-center">
+          <a className="navbar-brand" href="/dashboard">
+            <img src={logo} alt="Logo" width="30" height="30" className="d-inline-block align-text-top" style={imageStyle} />
+            <span style={titleStyle}>{props.title}</span>
+            <div style={subtitleStyle}>A Maharatna Company</div>
+          </a>
         </div>
-      </nav>
-    );
+
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          
+        </div>
+      </div>
+    </nav>
+  );
 }
 
 Navbar.propTypes = {
@@ -40,5 +52,5 @@ Navbar.propTypes = {
 }
 
 Navbar.defaultProps = {
-  title: 'Set Title here'
+  title: 'Oil and Natural Gas Corporation Limited'
 }
